@@ -41,7 +41,7 @@ static char	*_set_line(char *line_buffer)
 	if (line_buffer[i] == 0)
 		return (NULL);
 	left_c = ft_substr(line_buffer, i + 1, ft_strlen(line_buffer) - i);
-	if (*left_c == 0)
+  if (left_c && *left_c == 0)
 	{
 		free(left_c);
 		left_c = NULL;
