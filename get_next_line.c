@@ -85,7 +85,11 @@ char	*get_next_line(int fd)
 	char		*line;
 	char		*buffer;
 
-	buffer = (char *)malloc((BUFFER_SIZE + 1) * sizeof(char));
+buffer = (char *)malloc((BUFFER_SIZE + 1) * sizeof(char));
+	if (!buffer) {
+		free(left_c);
+		return (NULL);
+	}
 	if (fd < 0 || BUFFER_SIZE <= 0)
 	{
 		free(left_c);
