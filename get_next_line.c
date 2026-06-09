@@ -38,7 +38,7 @@ static char	*_set_line(char *line_buffer)
 	i = 0;
 	while (line_buffer[i] != '\n' && line_buffer[i] != '\0')
 		i++;
-if (line_buffer[i] == 0 || line_buffer[i + 1] == 0)
+if (line_buffer[i] == 0 || line_buffer[i + 1] == '\0')
 		return (NULL);
 	left_c = ft_substr(line_buffer, i + 1, ft_strlen(line_buffer) - i);
   if (left_c && *left_c == 0)
